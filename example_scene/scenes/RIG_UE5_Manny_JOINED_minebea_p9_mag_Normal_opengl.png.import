@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dimssjxq20q42"
+path.s3tc="res://.godot/imported/RIG_UE5_Manny_JOINED_minebea_p9_mag_Normal_opengl.png-b75f04f94dc6a42710d8219e95d43bf0.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "1a529f4b705c73b09552e600b424b704"
+}
+
+[deps]
+
+source_file="res://example_scene/scenes/RIG_UE5_Manny_JOINED_minebea_p9_mag_Normal_opengl.png"
+dest_files=["res://.godot/imported/RIG_UE5_Manny_JOINED_minebea_p9_mag_Normal_opengl.png-b75f04f94dc6a42710d8219e95d43bf0.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://example_scene/scenes/RIG_UE5_Manny_JOINED_minebea_p9_mag_Normal_opengl.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

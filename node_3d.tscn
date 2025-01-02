@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://v4dnjc0vfywg"]
+
+[ext_resource type="PackedScene" uid="uid://dlbkch6iuy8gn" path="res://addons/fp_controller/player.tscn" id="1_jxv61"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5k3gn"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_htcph"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_b4uh8"]
+
+[sub_resource type="Sky" id="Sky_7py4y"]
+sky_material = SubResource("ProceduralSkyMaterial_b4uh8")
+
+[sub_resource type="Environment" id="Environment_vdnmn"]
+background_mode = 2
+background_energy_multiplier = 3.0
+sky = SubResource("Sky_7py4y")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_jxv61")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(154.493, 0, 0, 0, 2, 0, 0, 0, 102.667, 0, -1.24882, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_5k3gn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_htcph")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_vdnmn")
