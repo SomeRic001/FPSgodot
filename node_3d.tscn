@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://v4dnjc0vfywg"]
+[gd_scene load_steps=9 format=3 uid="uid://v4dnjc0vfywg"]
 
-[ext_resource type="PackedScene" uid="uid://dlbkch6iuy8gn" path="res://addons/fp_controller/player.tscn" id="1_jxv61"]
+[ext_resource type="Script" path="res://addons/Basic FPS Player/Src/basic_player_startup.gd" id="2_s4vao"]
+[ext_resource type="PackedScene" uid="uid://kmyakts4l64t" path="res://addons/Basic FPS Player/Src/basic_player_head.tscn" id="3_i2hl8"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_5k3gn"]
 
@@ -16,9 +17,9 @@ background_mode = 2
 background_energy_multiplier = 3.0
 sky = SubResource("Sky_7py4y")
 
-[node name="Node3D" type="Node3D"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_uo4vo"]
 
-[node name="Player" parent="." instance=ExtResource("1_jxv61")]
+[node name="Node3D" type="Node3D"]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(154.493, 0, 0, 0, 2, 0, 0, 0, 102.667, 0, -1.24882, 0)
@@ -31,3 +32,21 @@ shape = SubResource("BoxShape3D_htcph")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_vdnmn")
+
+[node name="Basic FPS Player" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.84297, 0)
+script = ExtResource("2_s4vao")
+JUMP_VELOCITY = 6.0
+HEAD_BOB = false
+HEAD_BOB_FREQUENCY = 0.2
+HEAD_BOB_AMPLITUDE = 0.05
+KEY_BIND_UP = "forward"
+KEY_BIND_LEFT = "left"
+KEY_BIND_RIGHT = "right"
+KEY_BIND_DOWN = "back"
+KEY_BIND_JUMP = "jump"
+
+[node name="Head" type="Node3D" parent="Basic FPS Player" instance=ExtResource("3_i2hl8")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Basic FPS Player"]
+shape = SubResource("CapsuleShape3D_uo4vo")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://kmyakts4l64t"]
+
+[ext_resource type="PackedScene" uid="uid://ca7q0q7kvb6ur" path="res://arms.tscn" id="1_870yh"]
+
+[node name="Head" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+
+[node name="RIG_UE5_Manny_JOINED" parent="." instance=ExtResource("1_870yh")]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, -3.32478, -0.360701)
